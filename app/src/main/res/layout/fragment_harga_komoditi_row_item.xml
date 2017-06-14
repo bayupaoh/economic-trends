@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/icons"
+    android:background="@drawable/row_selector"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    app:contentPaddingBottom="16dp"
+    app:contentPaddingLeft="12dp"
+    app:contentPaddingRight="12dp"
+    app:contentPaddingTop="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_komoditi_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_komoditi_meat" />
+
+        <TextView
+            android:id="@+id/item_komoditi_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/item_komoditi_img"
+            android:text="Daging Sapi"
+            android:textColor="@color/primary_text"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/item_komoditi_harga"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_below="@id/item_komoditi_nama"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/item_komoditi_img"
+            android:text="Rp. 12000/Kg"
+            android:textColor="@color/primary_text"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/item_komoditi_status"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_status_up" />
+
+            <TextView
+                android:id="@+id/item_komoditi_status_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="Rp. 1000"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
