@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main_nav_komoditi"
+        android:title="Harga Komoditi" />
+
+    <item
+        android:id="@+id/main_nav_indikator_ekonomi"
+        android:title="Indikator Ekonomi" />
+
+    <item
+        android:id="@+id/main_nav_ekspor_impor"
+        android:title="Ekspor/Impor" />
+</menu>
