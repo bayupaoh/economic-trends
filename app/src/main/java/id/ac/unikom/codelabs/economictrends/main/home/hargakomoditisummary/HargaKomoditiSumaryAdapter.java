@@ -1,4 +1,4 @@
-package id.ac.unikom.codelabs.economictrends.main.hargakomoditi;
+package id.ac.unikom.codelabs.economictrends.main.home.hargakomoditisummary;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -19,12 +19,12 @@ import id.ac.unikom.codelabs.economictrends.data.HargaKomoditiDao;
  * Created by codelabsunikom on 6/14/17.
  */
 
-public class HargaKomoditiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class HargaKomoditiSumaryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private List<HargaKomoditiDao.DataBeanX> haDataBeanX;
-    private HargaKomoditiAdapter.HargaKomoditiItemListener hargaKomoditiItemListener;
+    private HargaKomoditiSumaryAdapter.HargaKomoditiItemListener hargaKomoditiItemListener;
 
-    public HargaKomoditiAdapter(Context context, List<HargaKomoditiDao.DataBeanX> haDataBeanX, HargaKomoditiItemListener hargaKomoditiItemListener) {
+    public HargaKomoditiSumaryAdapter(Context context, List<HargaKomoditiDao.DataBeanX> haDataBeanX, HargaKomoditiItemListener hargaKomoditiItemListener) {
         this.context = context;
         this.haDataBeanX = haDataBeanX;
         this.hargaKomoditiItemListener = hargaKomoditiItemListener;
@@ -32,8 +32,8 @@ public class HargaKomoditiAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.fragment_harga_komoditi_row_item, null);
-        return new HargaKomoditiAdapter.ViewHolder(view);
+        View view = LayoutInflater.from(context).inflate(R.layout.fragment_harga_komoditi_summary_row_item, null);
+        return new HargaKomoditiSumaryAdapter.ViewHolder(view);
     }
 
     @Override

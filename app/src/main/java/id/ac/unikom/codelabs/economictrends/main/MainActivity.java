@@ -17,7 +17,10 @@ import android.widget.FrameLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import id.ac.unikom.codelabs.economictrends.R;
-import id.ac.unikom.codelabs.economictrends.main.hargakomoditi.HargaKomoditiFragment;
+import id.ac.unikom.codelabs.economictrends.main.eksporimpor.EksporImporFragment;
+import id.ac.unikom.codelabs.economictrends.main.home.HomeFragment;
+import id.ac.unikom.codelabs.economictrends.main.home.hargakomoditisummary.HargaKomoditiSumaryFragment;
+import id.ac.unikom.codelabs.economictrends.main.indikatorekonomi.IndikatorEkonomiFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (savedInstanceState == null) {
             Fragment fragment = null;
             Class fragmentClass = null;
-            fragmentClass = HargaKomoditiFragment.class;
+            fragmentClass = HomeFragment.class;
             try {
                 fragment = (Fragment) fragmentClass.newInstance();
             } catch (Exception e) {
@@ -81,7 +84,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (id) {
             case R.id.main_nav_komoditi:
-                fragmentClass = HargaKomoditiFragment.class;
+                fragmentClass = HomeFragment.class;
+                getSupportActionBar().setSubtitle(item.getTitle());
+                break;
+            case R.id.main_nav_ekspor_impor:
+                fragmentClass = EksporImporFragment.class;
+                getSupportActionBar().setSubtitle(item.getTitle());
+                break;
+            case R.id.main_nav_indikator_ekonomi:
+                fragmentClass = IndikatorEkonomiFragment.class;
                 getSupportActionBar().setSubtitle(item.getTitle());
                 break;
         }

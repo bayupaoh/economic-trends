@@ -1,4 +1,4 @@
-package id.ac.unikom.codelabs.economictrends.main.hargakomoditi;
+package id.ac.unikom.codelabs.economictrends.main.home.hargakomoditisummary;
 
 import id.ac.unikom.codelabs.economictrends.BasePresenter;
 import id.ac.unikom.codelabs.economictrends.BaseView;
@@ -8,7 +8,7 @@ import id.ac.unikom.codelabs.economictrends.data.HargaKomoditiDao;
  * Created by codelabsunikom on 6/14/17.
  */
 
-public class HargaKomoditiContract {
+public class HargaKomoditiSumaryContract {
     interface View extends BaseView {
         void showProgress();
 

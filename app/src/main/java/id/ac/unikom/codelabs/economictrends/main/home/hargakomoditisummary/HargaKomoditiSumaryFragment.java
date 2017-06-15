@@ -1,4 +1,4 @@
-package id.ac.unikom.codelabs.economictrends.main.hargakomoditi;
+package id.ac.unikom.codelabs.economictrends.main.home.hargakomoditisummary;
 
 
 import android.os.Bundle;
@@ -20,15 +20,15 @@ import id.ac.unikom.codelabs.economictrends.data.HargaKomoditiDao;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HargaKomoditiFragment extends Fragment implements HargaKomoditiAdapter.HargaKomoditiItemListener {
+public class HargaKomoditiSumaryFragment extends Fragment implements HargaKomoditiSumaryAdapter.HargaKomoditiItemListener {
 
     @BindView(R.id.hargakomoditi_recycler)
     RecyclerView recHargaKomoditi;
-    HargaKomoditiAdapter hargaKomoditiAdapter;
+    HargaKomoditiSumaryAdapter hargaKomoditiAdapter;
 
     Unbinder unbinder;
 
-    public HargaKomoditiFragment() {
+    public HargaKomoditiSumaryFragment() {
         // Required empty public constructor
     }
 
@@ -37,7 +37,7 @@ public class HargaKomoditiFragment extends Fragment implements HargaKomoditiAdap
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_harga_komoditi, container, false);
+        View view = inflater.inflate(R.layout.fragment_harga_komoditi_summary, container, false);
         unbinder = ButterKnife.bind(this,view);
         setupRecyclerView();
         return view;
@@ -52,7 +52,7 @@ public class HargaKomoditiFragment extends Fragment implements HargaKomoditiAdap
             }
         });
 
-        hargaKomoditiAdapter = new HargaKomoditiAdapter(getContext(), new ArrayList<HargaKomoditiDao.DataBeanX>(), this);
+        hargaKomoditiAdapter = new HargaKomoditiSumaryAdapter(getContext(), new ArrayList<HargaKomoditiDao.DataBeanX>(), this);
         recHargaKomoditi.setAdapter(hargaKomoditiAdapter);
     }
 
